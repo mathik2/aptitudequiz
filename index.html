@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aptitude_byte</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <img src="logo.png"><span style="font-size: 3rem;"> aptitude_byte</span>
+    </div>
+    <button id="start" onclick="start()">START</button>
+    <p id="display"></p>
+    <div class="card">
+        <p>find odd man out 1,5,7,16,19,21</p>
+        <button id="optionA" onclick="right()">16</button>
+        <button id="optionB" onclick="wrong()">21</button>
+        <button onclick="question_one()">check</button></div>
+    <div class="card">
+        <p>What is the average of first five multiples of 12?</p>
+        <button id="optionA" onclick="right()">36</button>
+        <button id="optionB" onclick="wrong()">42</button>
+        <button onclick="question_two()">check</button></div>
+    <div class="card">
+        <p>The speed of a boat in still water is 5km/hr. If the speed of the boat against the stream is 3 km/hr, what is the speed of the stream?</p>
+        <button id="optionA" onclick="wrong()">2.5km/hr</button>
+        <button id="optionB" onclick="right()">2 km/hr</button>
+        <button onclick="question_three()">check</button></div>
+    <div class="card">
+        <p> If January 1, 1996, was Monday, what day of the week was January 1, 1997?</p>
+        <button id="optionA" onclick="wrong()">thursday</button>
+        <button id="optionB" onclick="right()">wednesday</button>
+        <button onclick="question_four()">check</button></div>
+    <div class="card">
+        <p>40 % of 280 =?</p>
+        <button id="optionA" onclick="right()">112</button>
+        <button id="optionB" onclick="wrong()">116</button>
+        <button onclick="question_five()">check</button></div>
+    <div class="card">
+        <p>The value of 5<sup>1/4</sup> x 125 <sup>0.25</sup> is</p>
+        <button id="optionA" onclick="wrong()">25</button>
+        <button id="optionB" onclick="right()">5</button>
+        <button onclick="question_six()">check</button></div>
+    <div class="card">
+        <p>What is the HCF of 1095 and 1168</p>
+        <button id="optionA" onclick="right()">73</button>
+        <button id="optionB" onclick="wrong()">83</button>
+        <button onclick="question_seven()">check</button></div>
+    <div class="card">
+        <p> What is the area of a triangle with base 5 meters and height 10 meters?</p>
+        <button id="optionA" onclick="right()">25</button>
+        <button id="optionB" onclick="wrong()">40</button>
+        <button onclick="question_eight()">check</button></div>
+    <div class="card">
+        <p>Find the missing term of the given expression: 18.834 + 818.34 -? = 618.43</p>
+        <button id="optionA" onclick="wrong()">217.644</button>
+        <button id="optionB" onclick="right()">218.744</button>
+        <button onclick="question_nine()">check</button></div>
+    <div class="card">
+        <p>Complete the series 2, 5, 9, 19, 37.......</p>
+        <button id="optionA" onclick="right()">75</button>
+        <button id="optionB" onclick="wrong()">73</button>
+        <button onclick="question_ten()">check</button></div>
+
+    <p>Thanks for being here :)</p>
+
+    <p>Provide your valuable feedback :)</p>
+    <textarea id="feedback"></textarea>
+    <button type="submit" id="submit" onclick="submit()">submit</button>
+
+    <p>Thank you visit tommorow</p>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var names;
+
+        function start() {
+
+            names = prompt("Enter your sweet name here")
+            document.getElementById("display").innerText = "Hey " + names + ", " + "brush up your aptitude skills with these questions :)";
+        }
+
+        function right() {
+            alert(" right")
+
+        }
+
+        function wrong() {
+            alert("wrong")
+        }
+
+        function question_one() {
+            alert("12 is an even number. All other given numbers are odd")
+        }
+
+        function question_two() {
+            alert(" Average = 12∗(1+2+3+4+5)/15 = 12∗ 15∗ / 5 = 12∗ 3 = 36 ")
+        }
+
+        function question_three() {
+            alert("Let the speed of stream = X km/hr. Speed of boat = 5 km/hr. Speed upstream = 3km/hr. Apply formula: Speed upstream = speed of boat - speed of stream. ∴ 3 = 5 - X. X = 5 - 3 = 2 km/hr")
+        }
+
+        function question_four() {
+            alert("The year 1996 is divisible by 4, so it is a leap year with 2 odd days. As per the question, the first day of the year 1996 was Monday, so the first day of the year 1997 must be two days after Monday. So, it was Wednesday.")
+        }
+
+        function question_five() {
+            alert("x % of a given number 'n' = x/100 *n . x = 40 and n = 280.∴ 40 % of 280 =(40/100)* 280 = 112")
+        }
+
+        function question_six() {
+            alert("5^(1/4) * 5^3 * (1/4) = 5 ^ (1/4 + 3/4) = 5 ^ 1 = 5")
+        }
+
+        function question_seven() {
+            alert("the HCF is 73")
+        }
+
+        function question_eight() {
+            alert("Area of a triangle = ½ * base * height.So, the area = ½* 5 * 10 = 25 square meters")
+        }
+
+        function question_nine() {
+            alert("837.174 - 618.430 = 218.744")
+        }
+
+        function question_ten() {
+            alert("number * 2 + 1,number * 2 -1,..... answer is 75")
+        }
+    </script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAQ-zroj6TZ5j_ZQ-5VpzPbQbCINP4g3bg",
+            authDomain: "aptitudebyte-f4c14.firebaseapp.com",
+            databaseURL: "https://aptitudebyte-f4c14-default-rtdb.firebaseio.com",
+            projectId: "aptitudebyte-f4c14",
+            storageBucket: "aptitudebyte-f4c14.appspot.com",
+            messagingSenderId: "992059486168",
+            appId: "1:992059486168:web:2c03b3dddcaa5c1fc30cad",
+            measurementId: "G-SH6CMGQGPB"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+
+        function submit() {
+            firebase.database().ref('feedback').push({
+
+                work: document.getElementById('feedback').value,
+                name: names
+            });
+        }
+    </script>
+</body>
+
+</html>
